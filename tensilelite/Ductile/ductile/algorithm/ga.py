@@ -92,7 +92,7 @@ class GeneticAlgorithm:
             ma_fa = np.mean(self.stats["f_avg"][w])
             ma_fm = np.mean(self.stats["f_max"][w])
             if ((ma_fa + self.tol) >= self.stats["f_avg"][-1]) and ((ma_fm + self.tol) >= self.stats["f_max"][-1]):
-                raise StopIteration(f"Termination criteria reached.")
+                raise StopIteration(f"No improvement for {self.period} generations.")
             
         self.pop_size = self.decay(self.pop_size) if hasattr(self, "decay") else self.pop_size
 

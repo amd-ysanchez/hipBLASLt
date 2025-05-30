@@ -108,7 +108,6 @@ def validate_solution(problemType,
     kernelWriterAssembly = KernelWriterAssembly(assembler, debugConfig)
     try:
         kernelWriterAssembly._initKernel(solutionObject, {}, {})
-        # kernelWriterAssembly._getKernelSource(solutionObject)
     except RuntimeError:
         return False
     

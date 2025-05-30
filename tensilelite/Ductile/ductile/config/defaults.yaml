@@ -1,6 +1,6 @@
 algorithm: GA
 pop_size: 512
-n_gen: 50
+n_gen: 30
 tol: 0.0001
 period: 5 # 0 disables it
 max_iters: 100
